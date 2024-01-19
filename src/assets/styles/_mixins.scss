@@ -1,0 +1,7 @@
+@mixin calc($selector, $startPx, $endPx, $start-width, $end-width) {
+  #{$selector}: calc(
+    #{$endPx}px +
+      ((100vw - #{$end-width}px) / (#{$start-width} - #{$end-width})) *
+      (#{$startPx} - #{$endPx})
+  );
+}
